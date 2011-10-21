@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Sortable - Include / exclude items</title>
+	
+	<script src="js/jquery-1.6.2.js"></script>
+	<script src="js/ui/jquery.ui.core.js"></script>
+	<script src="js/ui/jquery.ui.widget.js"></script>
+	<script src="js/ui/jquery.ui.mouse.js"></script>
+	<script src="js/ui/jquery.ui.sortable.js"></script>
+
+	<link rel="stylesheet" href="css/demos.css">
+
+	<style>
+		#sortable1, #backlog { list-style-type: none; margin: 0; padding: 0; zoom: 1; }
+		#sortable1 li, #backlog li { margin: 0 5px 5px 5px; padding: 3px; width: 90%; }
+	</style>
+	<script>
+		$(function() {
+			$( "#backlog" ).sortable({
+				cancel: ".head"
+			});
+					
+			$( "#backlog li" ).disableSelection();	
+
+			$("#backlog").sortable({
+				stop: function(event, ui) { 
+					var result = $("#backlog").sortable("toArray");
+					console.log(result);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+
+<ul id="backlog">
+	<li id="i1" class="task">
+		Нужно сделать страничку+таблицу в бд, в которых будут храниться курсы валют Active (всех регионов) для конвертации в USD и обратно. И исполльзовать ее в партнерке channel, статистике по продажам, сайте active и во всех других системах, где нужен курс. Поддерживать эту табличку должен менеджер через web-интерфейс.
+	</li>
+	<li id="i2" class="task head">(I'm not sortable)</li>
+	<li id="i3" class="task head">(I'm not sortable)</li>
+	<li id="i4" class="task">
+		<table style="border: 1px solid black;">
+			<tr>
+				<td>
+					123
+				</td>
+				<td>
+					456
+				</td>
+				<td>
+					<form>
+						<input type="checkbox">
+					</form>	
+				</td>
+			</tr>
+		</table>
+	</li>
+
+</ul>
+
+</body>
+</html>

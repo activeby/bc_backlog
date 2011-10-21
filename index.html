@@ -13,13 +13,12 @@
 	<link rel="stylesheet" href="css/demos.css">
 
 	<style>
-		#sortable1, #backlog { list-style-type: none; margin: 0; padding: 0; zoom: 1; }
-		#sortable1 li, #backlog li { margin: 0 5px 5px 5px; padding: 3px; width: 90%; }
+		
 	</style>
 	<script>
 		$(function() {
 			$( "#backlog" ).sortable({
-				cancel: ".head"
+				cancel: ".slide_head"
 			});
 					
 			$( "#backlog li" ).disableSelection();	
@@ -36,27 +35,56 @@
 <body>
 
 <ul id="backlog">
-	<li id="i1" class="task">
-		Нужно сделать страничку+таблицу в бд, в которых будут храниться курсы валют Active (всех регионов) для конвертации в USD и обратно. И исполльзовать ее в партнерке channel, статистике по продажам, сайте active и во всех других системах, где нужен курс. Поддерживать эту табличку должен менеджер через web-интерфейс.
+	<li id="mh" class="slide_head">--- 1-Must Have ---</li>
+
+	<li id="100572730" class="slide">
+		<div class="task">
+			<!--
+			<div class="t_id">
+				100132456
+			</div>
+			-->
+			<div class="t_project">
+				Internal
+			</div>
+			<div class="t_message">
+				Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem.
+			</div>
+			<div class="t_stakeholder">
+				Сергеев Сергей
+			</div>
+			<div class="t_time">
+				10
+			</div>
+		</div>
 	</li>
-	<li id="i2" class="task head">(I'm not sortable)</li>
-	<li id="i3" class="task head">(I'm not sortable)</li>
-	<li id="i4" class="task">
-		<table style="border: 1px solid black;">
-			<tr>
-				<td>
-					123
-				</td>
-				<td>
-					456
-				</td>
-				<td>
-					<form>
-						<input type="checkbox">
-					</form>	
-				</td>
-			</tr>
-		</table>
+	
+	<li id="sh" class="slide_head">--- 2-Should Have ---</li>
+	<li id="nh" class="slide_head">--- 3-Nice to Have ---</li>
+	<li id="dh" class="slide_head">--- 4-Don't Need Now ---</li>
+	<li id="np" class="slide_head">--- Not Prioritized ---</li>
+
+
+	<li id="100572735" class="slide">
+		<div class="task">
+			<!--
+			<div class="t_id">
+				100132888
+			</div>
+			-->
+			<div class="t_project">
+				Local
+			</div>
+			<div class="t_message">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+			<div class="t_stakeholder">
+				Иван Иванов Иван
+			</div>
+			<div class="t_time">
+				150
+			</div>
+		</div>
 	</li>
 
 </ul>

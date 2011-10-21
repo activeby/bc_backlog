@@ -1,5 +1,5 @@
 body {
-	font-size: 62.5%;
+	font-size: 80%;
 }
 
 table {
@@ -13,16 +13,60 @@ body {
 	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
 }
 
-
 /* ############################## */
-.task { 
-	border: 1px solid #d3d3d3/*{borderColorDefault}*/; 
-	background: #e6e6e6/*{bgColorDefault}*/ url(images/ui-bg_glass_75_e6e6e6_1x400.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #555555/*{fcDefault}*/; 
+#backlog { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	zoom: 1; 
 }
 
-.head { 
-	background-color: #EEA5A5; 
-	color: black;
+#backlog li { 
+	margin: 0 5px 5px 5px; 
+	padding: 3px; 
+	width: 1000px; 
+}
+
+/* ############################## */
+.slide { 
+	border: 1px solid #d3d3d3/*{borderColorDefault}*/; 
+	background: #e6e6e6; 
+	font-weight: normal; 
+	color: #333333; 
+}
+
+.slide_head { 
+	border: 1px solid #d3d3d3/*{borderColorDefault}*/; 
+	background-color: #CCD3FD; 
+	color: #333333;
 	background-image: none;
 }
 
+/* ################## */
+.task {
+	overflow: hidden;
+}
+/*
+.t_id {
+	width: 70px; 
+	float: left; 
+}
+*/
+.t_project {
+	width: 70px; 
+	float: left; 
+}
+.t_message {
+	width: 740px; 
+	float: left; 
+	padding: 0px 5px 0px 5px;
+}
+.t_stakeholder {
+	width: 140px; 
+	float: left; 
+	padding: 0px 5px 0px 5px;
+}
+.t_time {
+	width: 30px; 
+	float: right; 	
+}

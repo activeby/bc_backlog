@@ -1,0 +1,60 @@
+<h1>Listing tasks</h1>
+
+
+<%= link_to 'New Task', new_task_path %>
+
+<br />
+############################################ 
+
+<script>
+$(function() {
+        $( "#backlog" ).sortable({
+                cancel: ".slide_head"
+        });
+
+        $( "#backlog li" ).disableSelection();
+
+        $("#backlog").sortable({
+    		handle: ".t_project", 
+                stop: function(event, ui) {
+                        var result = $("#backlog").sortable("toArray");
+                        console.log(result);
+                }
+        });
+});
+</script>
+
+<ul id="backlog">
+
+
+        <li id="mh" class="slide_head">--- 1-Must Have ---</li>
+        <li id="sh" class="slide_head">--- 2-Should Have ---</li>
+        <li id="nh" class="slide_head">--- 3-Nice to Have ---</li>
+        <li id="dh" class="slide_head">--- 4-Don't Need Now ---</li>
+        <li id="np" class="slide_head">--- Not Prioritized ---</li>
+
+
+	<% @tasks.each do |task| %>
+        <li id="<%= task.uid %>" class="slide">
+                <div class="task">
+                        <div class="t_project">
+                		<%= task.project %>
+                        </div>
+                        <div class="t_message">
+                    		<%= task.message %>
+                        </div>
+                        <div class="t_stakeholder">
+                                <%= task.stakeholder %>
+                        </div>
+                        <div class="t_time">
+                                <%= task.time %>
+                        </div>
+                </div>
+        </li>
+
+	<% end %>
+
+</ul>
+
+
+

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Backlog::Application.config.secret_token = '0bb0a86b669338c255546c3c8286ec173cadccf969ffd671d36f826063f83e1f4325ef4c55be35472583ae3a7fbbbfdceea1bb743a2ba5aedb1854d3b0b3a19e'
+Backlog::Application.config.secret_token = 'e9a42a83df56de5709803d7478a46bcf682bbff3396516c69128b581d6102160d94a892fe39a59db36d5cafb097b7bc2b8230b99513277bf2521528019ea3538'

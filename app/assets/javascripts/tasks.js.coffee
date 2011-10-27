@@ -5,5 +5,6 @@
 jQuery ->
   $('#tasks').sortable
     axis: 'y'
+    handle: '.handler'
     update: ->
       $.post($(this).data('update-url'), $(this).sortable('serialize'))

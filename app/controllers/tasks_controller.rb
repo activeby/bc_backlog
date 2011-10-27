@@ -2,12 +2,12 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.order("position")
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @tasks }
-    end
+#    respond_to do |format|
+#      format.html # index.html.erb
+#      format.json { render json: @tasks }
+#    end
   end
 
   # GET /tasks/1
@@ -79,5 +79,12 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_url }
       format.json { head :ok }
     end
+  end
+  
+  def sort
+    params[:task].each_with_index do |id, index|
+      Task.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
   end
 end

@@ -6,6 +6,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :message
       t.string :stakeholder
       t.integer :time
+      t.integer :position
 
       t.timestamps
     end

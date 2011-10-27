@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20111022202846) do
     t.string   "message"
     t.string   "stakeholder"
     t.integer  "time"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
